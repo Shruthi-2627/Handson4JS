@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JS Hands-on 4</title>
+</head>
+<body>
+    <h1>Arrays in JS</h1>
+      <hr>
+      <h2>1. Find the Product.</h2>
+      <div>
+      <pre>
+      const Find_Prod = (array, N) => 
+      {
+      let product=1;
+      for(let i=0; i<N; i++){
+      product*=array[i];
+      }
+      return product;
+      };
+      </pre>
+      </div>
+      
+      <h2>2. Find the Sum.</h2>
+      <div>
+      <pre>
+      const Find_Sum = (array, N) => 
+      {
+      let sum=0;
+      for(let i=0; i<array.length; i++){
+        sum=sum+array[i];
+      }
+      return sum;
+      };
+      </pre>
+      </div>
+​
+      <h2>3. Count Occurrences.</h2>
+      <div>
+      <pre>
+      const findCount = (N, K, Arr) => 
+      {
+      let count=0;
+      for(let i=0; i<N; i++){
+        if(Arr[i]===K)
+        count++;
+      }
+      return count;
+      };
+      </pre>
+      </div>
+​
+      <h2>4. Even Odd.</h2>
+      <div>
+      <pre>
+      const findEvenOdd = (N, Arr) => 
+      {
+      let sumOfEven=0; let sumOfOdd=0;
+      for(let i=0; i<N; i++){
+        if(Arr[i]%2===0)
+        sumOfEven+=Arr[i];
+        else 
+        sumOfOdd+=Arr[i];
+      }
+        let B=[sumOfEven, sumOfOdd];
+        return B;
+      };
+      </pre>
+      </div>
+​
+      <h2>5. Find whether the number is present or not.</h2>
+      <div>
+      <pre>
+      const Find_Num = (array,N,M) => 
+      {
+      let flag=0;
+      for(let i=0; i<N; i++){
+        if(array[i]===M)
+        flag++;
+      }
+      if(flag!==0)
+      return ("YES");
+      else 
+      return ("NO");
+      };
+      </pre>
+      </div>
+​
+      <h2>6. Higher Age</h2>
+      <div>
+      <pre>
+      const highAge = (N, Arr) => 
+      {
+      let B=[];
+      for(let i=0; i<N; i++){
+        if(Arr[i]>=18)
+        B.push(Arr[i]);
+      }
+      return B;
+      };
+      </pre>
+      </div>
+​
+      <h2>7. Increment the Array Elements</h2>
+      <div>
+      <pre>
+      const Inc_Arr = (array,N) => 
+      {
+      let arr;
+      for(let i=0;i<array.length;i++){
+      arr=array[i]+1;
+      console.log(arr);
+        
+        }
+      };      
+      </pre>
+      </div>
+​
+      <h2>8. Pass or Fail</h2>
+      <div>
+      <pre>
+      const isAllPass = (N, Arr) => 
+      {
+      let count=0;
+      for(let i=0; i<N; i++){
+      if(Arr[i]>=32)
+      continue;
+      else
+      count++;
+      return "NO";
+      }  
+      if(count===0)
+      return "YES";
+      };
+      </pre>
+      </div>
+      
+      <h2>9. Unique Color Shirt.</h2>
+      <div>
+      <pre>
+      function Unique_Shirts (arr,N) {
+      let count=0;
+      let check;
+      for(let i=0; i<N; i++){
+      check=false;
+      for(let j=0;j<N;j++){
+      if(i!=j && arr[i]===arr[j]){
+      check=true;
+      break;
+      }
+      }
+      if(check===false){
+      count++;
+      }
+      }
+      return count;
+​
+      }
+​
+      </pre>
+      </div>
+​
+      <h2>10. Min and Max.</h2>
+      <div>
+      <pre>
+      function arrayMin(arr) {
+        let min=arr[0];
+        let size=arr.length ;
+        for(let i=0; i<size; i++)
+        {
+          if(arr[i]<min)
+          min=arr[i];
+        }
+        return min;
+​
+      }
+​
+      function arrayMax(arr) {
+      let max=arr[0];
+      let size=arr.length ;
+        for(let i=0; i<size; i++)
+        {
+          if(arr[i]>max)
+          max=arr[i];
+        }
+        return max;
+​
+      }
+      </pre>
+      </div>
+​
+      <h2>11. Birthday Game.</h2>
+      <div>
+      <pre>
+
+     function Birthday_Game(arr,D ,M) {
+
+      let count=0;
+      let sum=0;
+      for(let i=0;i<= arr.length-M;i++){
+      sum=0;
+      for(let j=0;j< M;j++){
+          sum=sum+arr[i+j];
+      }
+                
+      if(sum===D){
+        count++;        
+      }
+      }
+      return count;
+      }
+    </pre>
+    </div>
+​
+</body>
+</html>
